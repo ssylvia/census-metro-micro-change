@@ -585,7 +585,8 @@ define(["esri/map",
 					slider: divId != "lensMapNode",
 					autoResize: false,
 					infoWindow: app.popup[index],
-					showAttribution: divId != "lensMapNode"
+					showAttribution: divId != "lensMapNode",
+					maxZoom: 8
 				},
 				ignorePopups: false,
 				bingMapsKey: commonConfig.bingMapsKey

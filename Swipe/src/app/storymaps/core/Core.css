@@ -187,3 +187,11 @@ a:hover {
 	height: 75px;
 	background-repeat: no-repeat;
 }
+
+#legend0{
+	width: 100%;
+}
+
+#legend1{
+	display: none;
+}

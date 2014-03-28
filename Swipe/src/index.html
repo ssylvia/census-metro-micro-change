@@ -51,7 +51,7 @@
 				layerIndex: 1, 
 				// Alternatively you can also reuse a web application ID created through the interactive builder in ArcGIS.com 
 				// This allow to reuse the settings like the header configuration without having to edit any configuration here
-				appid: "",
+				appid: "144de7019766406c8731ec75f79b730f",
 				//----------------------------------
 				// Pop-up
 				//----------------------------------
@@ -232,6 +232,56 @@
 		<!--[if IE 7]>
 			<link rel="stylesheet" href="resources/font/storymaps-icons-ie7.css">
 		<![endif]-->
+		<style>
+			.rightArea .logo{
+				position: absolute;
+				max-height: none;
+				max-width: none;
+				height: 115px;
+				top: 0 !important;
+				right: 0 !important;
+			}
+
+			.rightArea .logo img {
+				position: relative;
+				max-width: 250px;
+				max-height: 115px;
+				margin: 0;
+				top: 0;
+			}
+
+			.rightArea .logo a img{
+				margin: 0;
+			}
+
+			.rightArea .social {
+				margin-right: 115px;
+			}
+
+			#descriptionPanel{
+				height: 66%;
+			}
+
+			#legendPanel{
+				height: 31%;
+			}
+
+			.esriLegendLayerLabel{
+				font-weight: bold;
+			}
+
+			.esriLegendServiceLabel{
+				display: none;
+			}
+
+			.esriPopup .mainSection {
+				line-height: 1.6;
+			}
+
+			.zoomTo, .maximize{
+				display: none;
+			}
+		</style>
 	</head>
 	<body class="claro">
 		<div id="header">
@@ -574,7 +624,7 @@
 							<div class="controls">
 								<input class="inputWebmapId2" type="text" maxlength="32"/>
 							</div>
-						<a class="btn btn-mini browseMaps" "><i class="icon-search"></i></a> 
+						<a class="btn btn-mini browseMaps"><i class="icon-search"></i></a> 
 						</div>
 					</div>
 					<button class="btnSelect btn"></button>
