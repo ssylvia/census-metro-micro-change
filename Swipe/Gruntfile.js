@@ -119,7 +119,7 @@
                     files: [{
                         expand: true,
                         cwd: 'src',
-                        src:['resources/**'],
+                        src:['resources/**','!resources/sftp-config.json'],
                         dest: 'deploy/'
                     }]
                 },
@@ -146,6 +146,15 @@
 						src:['commonConfig.js'],
 						dest: 'deploy/app'
 					}]
+				},
+				ftp: {
+					files: [{
+                        expand: true,
+                        flatten: true,
+                        cwd: 'src',
+                        src:['resources/sftp-config.json'],
+                        dest: 'deploy/'
+                    }]
 				}
             },
 			
@@ -255,7 +264,8 @@
 			'copy:config',
 			'copy:commonConfig',
 			'copy:bootstrapResources',
-			'copy:resources'
+			'copy:resources',
+			'copy:ftp'
 		]);
     };
 })();
