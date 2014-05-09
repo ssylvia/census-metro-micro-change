@@ -194,6 +194,10 @@ define(["dojo/dnd/move",
 					setPopup(mapPoint);			
 	        	});
 				
+				dojo.connect(app.mainMap, 'onZoomEnd', function(){
+					setPopup(mapPoint);
+				});
+				
 				var isGraphics = app.mainMap.getLayer(_layers[0]).type == "Feature Layer";
 				if(isGraphics){
 					on(_webMapArray[0], 'pan-end', function(args) 
@@ -346,8 +350,10 @@ define(["dojo/dnd/move",
 				_lastSwiperEventPoint = evt;
 				
 				// Desktop popup
-				if(!app.popup[0].features)
+				if (!app.popup[0].features) {
+					app.popup[0].hide()
 					return;
+				}
 				
 				// Data may not be found when clicking on the same side than a graphics layer
 				var dataFound = false;
